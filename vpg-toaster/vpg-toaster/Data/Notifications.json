@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Ровная осанка",
+    "IntervalBetweenNotifications": 30,
+    "EnabledByUser": null,
+    "EnabledByDefault": true
+  },
+
+  {
+    "Name": "Расслабление горла",
+    "IntervalBetweenNotifications": 30,
+    "EnabledByUser": null,
+    "EnabledByDefault": true
+  },
+]
