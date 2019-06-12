@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+  <Tools>
+    <Load tool="vpg_toaster.Tools.Toaster.ToasterTool, vpg-toaster" name="Планировщик" addToMenu="Инструменты/Планировщик" />
+  </Tools>
+</Configuration>

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace vpg_toaster.Model
 {
-    class AppModel
+    class ToasterModel
     {
 
     }

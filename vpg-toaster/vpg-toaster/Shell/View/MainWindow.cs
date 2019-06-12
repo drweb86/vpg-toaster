@@ -1,20 +1,11 @@
-﻿using HDE.Platform.AspectOrientedFramework;
-using HDE.Platform.AspectOrientedFramework.WinForms;
+﻿using HDE.Platform.AspectOrientedFramework.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using vpg_toaster.Controller;
 using vpg_toaster.Shell.Controller;
 
 namespace vpg_toaster
 {
-    public partial class MainWindow : Form, IMainFormView, IBaseView<ShellController>
+    public partial class MainWindow : Form, IMainFormView
     {
         //private readonly AppController _appController = new AppController();
 
@@ -34,10 +25,6 @@ namespace vpg_toaster
         }
 
         private ShellController _context;
-        public void SetContext(ShellController context)
-        {
-            _context = context;
-        }
 
         private void OnLoad(object sender, EventArgs e)
         {
@@ -49,9 +36,9 @@ namespace vpg_toaster
 
         }
 
-        private void OnFormClosing(object sender, FormClosingEventArgs e)
+        public void SetController(object controller)
         {
-            _context.TearDown();
+            _context = (ShellController)controller;
         }
     }
 }
