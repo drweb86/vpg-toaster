@@ -50,6 +50,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tools\AboutApp\Controller\ToasterController.cs" />
+    <Compile Include="Tools\AboutApp\Model\ToasterModel.cs" />
+    <Compile Include="Tools\AboutApp\AboutAppTool.cs" />
+    <Compile Include="Tools\AboutApp\Views\AboutAppMainView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tools\AboutApp\Views\AboutAppMainView.Designer.cs">
+      <DependentUpon>AboutAppMainView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tools\Toaster\Controller\ToasterController.cs" />
     <Compile Include="Tools\Toaster\Model\ToasterModel.cs" />
     <Compile Include="Shell\Commands\ExecuteShellCmd.cs" />
@@ -84,6 +93,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Tools\AboutApp\Views\AboutAppMainView.resx">
+      <DependentUpon>AboutAppMainView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tools\Toaster\Views\ToasterMainView.resx">
       <DependentUpon>ToasterMainView.cs</DependentUpon>
     </EmbeddedResource>

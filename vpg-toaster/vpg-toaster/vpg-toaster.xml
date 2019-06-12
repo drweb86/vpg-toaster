@@ -2,5 +2,6 @@
 <Configuration>
   <Tools>
     <Load tool="vpg_toaster.Tools.Toaster.ToasterTool, vpg-toaster" name="Планировщик" addToMenu="Инструменты/Планировщик" />
+    <Load tool="vpg_toaster.Tools.AboutApp.AboutAppTool, vpg-toaster" name="О Программе" addToMenu="О Программе" />
   </Tools>
 </Configuration>
