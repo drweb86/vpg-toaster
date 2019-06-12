@@ -2,8 +2,8 @@
 using HDE.Platform.AspectOrientedFramework.WinForms;
 using HDE.Platform.Collections;
 using HDE.Platform.Logging;
-using vpg_toaster.Tools.Controller;
-using vpg_toaster.Tools.View;
+using vpg_toaster.Tools.Toaster.Controller;
+using vpg_toaster.Tools.Toaster.Views;
 
 namespace vpg_toaster.Tools.Toaster
 {

@@ -50,8 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tools\Controller\ToasterController.cs" />
-    <Compile Include="Tools\Model\ToasterModel.cs" />
+    <Compile Include="Tools\Toaster\Controller\ToasterController.cs" />
+    <Compile Include="Tools\Toaster\Model\ToasterModel.cs" />
     <Compile Include="Shell\Commands\ExecuteShellCmd.cs" />
     <Compile Include="Shell\Controller\ShellController.cs" />
     <Compile Include="Shell\Models\ShellModel.cs" />
@@ -61,14 +61,14 @@
     <Compile Include="Shell\View\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Model\Notification.cs" />
+    <Compile Include="Tools\Toaster\Model\Notification.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tools\Toaster\ToasterTool.cs" />
-    <Compile Include="Tools\View\ToasterMainView.cs">
+    <Compile Include="Tools\Toaster\Views\ToasterMainView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Tools\View\ToasterMainView.Designer.cs">
+    <Compile Include="Tools\Toaster\Views\ToasterMainView.Designer.cs">
       <DependentUpon>ToasterMainView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Shell\View\MainWindow.resx">
@@ -84,7 +84,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tools\View\ToasterMainView.resx">
+    <EmbeddedResource Include="Tools\Toaster\Views\ToasterMainView.resx">
       <DependentUpon>ToasterMainView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Data\Notifications.json" />

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using vpg_toaster.Tools.Controller;
+using vpg_toaster.Tools.Toaster.Controller;
 
-namespace vpg_toaster.Tools.View
+namespace vpg_toaster.Tools.Toaster.Views
 {
     public partial class ToasterMainView : UserControl
     {

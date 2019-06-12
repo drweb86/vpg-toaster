@@ -1,4 +1,4 @@
-﻿namespace vpg_toaster.Tools.View
+﻿namespace vpg_toaster.Tools.Toaster.Views
 {
     partial class ToasterMainView
     {

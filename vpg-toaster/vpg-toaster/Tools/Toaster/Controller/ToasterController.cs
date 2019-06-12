@@ -1,9 +1,9 @@
 ﻿using System;
 using HDE.Platform.AspectOrientedFramework;
 using HDE.Platform.Logging;
-using vpg_toaster.Model;
+using vpg_toaster.Tools.Toaster.Model;
 
-namespace vpg_toaster.Tools.Controller
+namespace vpg_toaster.Tools.Toaster.Controller
 {
     class ToasterController : BaseController<ToasterModel>
     {
