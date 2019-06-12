@@ -64,6 +64,8 @@
             this._notificationsCheckedListBox.Name = "_notificationsCheckedListBox";
             this._notificationsCheckedListBox.Size = new System.Drawing.Size(912, 349);
             this._notificationsCheckedListBox.TabIndex = 3;
+            this._notificationsCheckedListBox.ThreeDCheckBoxes = true;
+            this._notificationsCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OnItemCheck);
             // 
             // _selectNotificationTypesLabel
             // 

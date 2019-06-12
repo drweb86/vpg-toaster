@@ -8,6 +8,6 @@ namespace vpg_toaster.Tools.Toaster.Model
 {
     class ToasterModel
     {
-
+        public IEnumerable<Toast> Toasters { get; internal set; }
     }
 }

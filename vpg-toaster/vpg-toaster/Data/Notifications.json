@@ -1,15 +1,15 @@
-[
+п»ї[
   {
-    "Name": "Ровная осанка",
+    "Name": "Р РѕРІРЅР°СЏ РѕСЃР°РЅРєР°",
     "IntervalBetweenNotifications": 30,
     "EnabledByUser": null,
     "EnabledByDefault": true
   },
 
   {
-    "Name": "Расслабление горла",
+    "Name": "Р Р°СЃСЃР»Р°Р±Р»РµРЅРёРµ РіРѕСЂР»Р°",
     "IntervalBetweenNotifications": 30,
     "EnabledByUser": null,
     "EnabledByDefault": true
-  },
+  }
 ]

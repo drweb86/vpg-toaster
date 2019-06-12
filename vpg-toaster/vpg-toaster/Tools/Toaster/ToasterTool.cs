@@ -31,14 +31,16 @@ namespace vpg_toaster.Tools.Toaster
 
             if (_controller == null)
             {
-                _controller = new ToasterController(Log);
-                // _controller.LoadSettings(); !
-                _tabPage = new TabPage(ToolName);
                 _mainView = new ToasterMainView { Dock = DockStyle.Fill };
-                _mainView.Init(_controller);
+                _tabPage = new TabPage(ToolName);
                 _tabPage.Controls.Add(_mainView);
                 TabControl.TabPages.Add(_tabPage);
                 TabControl.SelectTab(_tabPage);
+
+                _controller = new ToasterController(Log, this);
+                _mainView.Init(_controller);
+
+                _controller.LoadSettings();
             }
             else // Select tab page.
             {
@@ -52,6 +54,7 @@ namespace vpg_toaster.Tools.Toaster
             {
                 _mainView.TearDown();
                 _mainView = null;
+                _controller.TearDown();
                 _controller.Dispose();
                 _controller = null;
                 TabControl.TabPages.Remove(_tabPage);

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace vpg_toaster.Tools.Toaster.Model
+namespace vpg_toaster.Tools.Toaster
 {
-    class Notification
+    class ToasterAspects
     {
-        public string Title { get; private set; }
+        public const string Loaded = "Loaded";
     }
 }
