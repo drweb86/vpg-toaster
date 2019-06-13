@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Threading;
 using vpg_toaster.Tools.Toaster.Controller;
 
 namespace vpg_toaster.Tools.Toaster.Views
