@@ -9,5 +9,6 @@ namespace vpg_toaster.Tools.Toaster
     class ToasterAspects
     {
         public const string Loaded = "Loaded";
+        public const string ShowNotification = "ShowNotification";
     }
 }

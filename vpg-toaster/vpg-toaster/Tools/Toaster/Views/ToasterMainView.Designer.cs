@@ -31,7 +31,6 @@
             this._mainUiTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this._notificationsCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this._selectNotificationTypesLabel = new System.Windows.Forms.Label();
-            this._goButton = new System.Windows.Forms.Button();
             this._mainUiTableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +40,6 @@
             this._mainUiTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this._mainUiTableLayoutPanel.Controls.Add(this._notificationsCheckedListBox, 0, 1);
             this._mainUiTableLayoutPanel.Controls.Add(this._selectNotificationTypesLabel, 0, 0);
-            this._mainUiTableLayoutPanel.Controls.Add(this._goButton, 0, 2);
             this._mainUiTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this._mainUiTableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this._mainUiTableLayoutPanel.Name = "_mainUiTableLayoutPanel";
@@ -60,9 +58,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this._notificationsCheckedListBox.FormattingEnabled = true;
-            this._notificationsCheckedListBox.Location = new System.Drawing.Point(18, 31);
+            this._notificationsCheckedListBox.Location = new System.Drawing.Point(18, 57);
             this._notificationsCheckedListBox.Name = "_notificationsCheckedListBox";
-            this._notificationsCheckedListBox.Size = new System.Drawing.Size(912, 349);
+            this._notificationsCheckedListBox.Size = new System.Drawing.Size(912, 364);
             this._notificationsCheckedListBox.TabIndex = 3;
             this._notificationsCheckedListBox.ThreeDCheckBoxes = true;
             this._notificationsCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.OnItemCheck);
@@ -72,19 +70,10 @@
             this._selectNotificationTypesLabel.AutoSize = true;
             this._selectNotificationTypesLabel.Location = new System.Drawing.Point(18, 15);
             this._selectNotificationTypesLabel.Name = "_selectNotificationTypesLabel";
-            this._selectNotificationTypesLabel.Size = new System.Drawing.Size(318, 13);
+            this._selectNotificationTypesLabel.Size = new System.Drawing.Size(394, 39);
             this._selectNotificationTypesLabel.TabIndex = 4;
-            this._selectNotificationTypesLabel.Text = "Выберите уведомления, о которых показывать нотификации";
-            // 
-            // _goButton
-            // 
-            this._goButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this._goButton.Location = new System.Drawing.Point(758, 387);
-            this._goButton.Name = "_goButton";
-            this._goButton.Size = new System.Drawing.Size(172, 46);
-            this._goButton.TabIndex = 6;
-            this._goButton.Text = "Начать планирование уведомлений";
-            this._goButton.UseVisualStyleBackColor = true;
+            this._selectNotificationTypesLabel.Text = "Нотификации запущены.\r\n\r\nЕсли хотите отключить или включить уведомления, щелкните" +
+    " галочки ниже";
             // 
             // ToasterMainView
             // 
@@ -104,6 +93,5 @@
         private System.Windows.Forms.TableLayoutPanel _mainUiTableLayoutPanel;
         private System.Windows.Forms.CheckedListBox _notificationsCheckedListBox;
         private System.Windows.Forms.Label _selectNotificationTypesLabel;
-        private System.Windows.Forms.Button _goButton;
     }
 }

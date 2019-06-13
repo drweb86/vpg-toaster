@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Threading;
 using vpg_toaster.Tools.Toaster.Controller;
 
 namespace vpg_toaster.Tools.Toaster.Views
@@ -12,9 +14,11 @@ namespace vpg_toaster.Tools.Toaster.Views
         }
 
         private ToasterController _controller;
+        private SynchronizationContext _context;
         internal void Init(ToasterController controller)
         {
             _controller = controller;
+            _context = SynchronizationContext.Current;
         }
 
         internal void TearDown()
@@ -29,7 +33,18 @@ namespace vpg_toaster.Tools.Toaster.Views
                 case ToasterAspects.Loaded:
                     UpdateItems();
                     break;
+                case ToasterAspects.ShowNotification:
+                    ShowNotification((string)body[0]);
+                    break;
             }
+        }
+
+        private void ShowNotification(string title)
+        {
+            _context.Post(o =>
+                {
+                    MessageBox.Show(title, "Нотификация - vpg-toaster", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }, null);
         }
 
         private void UpdateItems()

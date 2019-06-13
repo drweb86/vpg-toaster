@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using HDE.Platform.AspectOrientedFramework;
 using HDE.Platform.Logging;
 using vpg_toaster.Tools.Toaster.Commands;
@@ -10,7 +9,7 @@ namespace vpg_toaster.Tools.Toaster.Controller
 {
     class ToasterController : BaseController<ToasterModel>
     {
-        public readonly Dictionary<string, Task> ToastTasks = new Dictionary<string, Task>();
+        public readonly List<Guid> ToastTasksTickets = new List<Guid>();
 
         public ToasterController(ILog log, ToasterTool tool)
         {
@@ -35,7 +34,7 @@ namespace vpg_toaster.Tools.Toaster.Controller
             new RescheduleTasksCmd().Execute(this);
         }
 
-        internal void ProcessMessage(string subject, object[] body)
+        internal void ProcessMessage(string subject, params object[] body)
         {
             _tool.ApplyChange(subject, body);
         }
