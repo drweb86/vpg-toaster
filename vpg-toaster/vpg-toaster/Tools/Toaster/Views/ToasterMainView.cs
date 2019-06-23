@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Speech.Synthesis;
 using System.Threading;
 using System.Windows.Forms;
 using vpg_toaster.Tools.Toaster.Controller;
+using vpg_toaster.Tools.Toaster.Utils;
 
 namespace vpg_toaster.Tools.Toaster.Views
 {
@@ -42,8 +44,24 @@ namespace vpg_toaster.Tools.Toaster.Views
         {
             _context.Post(o =>
                 {
-                    MessageBox.Show(title, "Нотификация - vpg-toaster", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FlashWindow.Flash(this.ParentForm);
+                    SpeakIt(title);
+                    MessageBox.Show(this.ParentForm, title, "Нотификация - vpg-toaster", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }, null);
+        }
+
+        private void SpeakIt(string title)
+        {
+            using (var synth = new SpeechSynthesizer())
+            {
+                synth.SetOutputToDefaultAudioDevice();
+
+                // Create a prompt from a string.  
+                var color = new Prompt(title);
+
+                // Speak the contents of the prompt synchronously.  
+                synth.Speak(color);
+            }
         }
 
         private void UpdateItems()
